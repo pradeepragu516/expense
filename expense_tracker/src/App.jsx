@@ -7,6 +7,7 @@ import AddExpense from './components/AddExpense'
 import Transaction from './components/Transaction'
 import Balance from './components/Balance';
 import IncomeBalance from './components/IncomeBalance';
+import useEffect from 
 
 function App() {
   const [transaction,setTransaction] = useState( [
