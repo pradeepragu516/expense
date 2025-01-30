@@ -7,14 +7,14 @@ import AddExpense from './components/AddExpense'
 import Transaction from './components/Transaction'
 import Balance from './components/Balance';
 import IncomeBalance from './components/IncomeBalance';
-import useEffect from 
+
 
 function App() {
   const [transaction,setTransaction] = useState( [
-    {id : 1, expense : "Rent", amount : -5000},
+    {id : 1, expense : "Rent", amount : 5000},
     {id : 2, expense : "Salary", amount : 10000},
-    {id : 3, expense : "Food", amount : -2000},
-    {id : 4, expense : "Grocery", amount : -1000},
+    {id : 3, expense : "Food", amount : 2000},
+    {id : 4, expense : "Grocery", amount : 1000},
 ] );
 
   const onAdd = (data) => {
