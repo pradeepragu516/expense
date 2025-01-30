@@ -1,16 +1,15 @@
 const IncomeBalance = (props)=>{
     const{transaction} = props;
 
-    let income = 0;
-    let expense = 0;
+    let income = transactions
+        .filter(transaction => transaction.amount > 0)
+        .reduce((acc, transaction) => acc + transaction.amount, 0);
 
-    for(let i=0; i<transaction.length; i++){
-        if(transaction[i].amount > 0){
-            income += transaction[i].amount;
-        }else{
-            expense += transaction[i].amount;
-        }
-    }
+    
+    let expense = transactions
+        .filter(transaction => transaction.amount < 0)
+        .reduce((acc, transaction) => acc + Math.abs(transaction.amount), 0);
+
 
     return (
         <>

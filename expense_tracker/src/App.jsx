@@ -3,6 +3,7 @@
 //import viteLogo from '/vite.svg'
 import { useEffect, useState } from 'react'
 import './App.css'
+import './index.css'
 import AddExpense from './components/AddExpense'
 import Transaction from './components/Transaction'
 import Balance from './components/Balance';
@@ -11,12 +12,7 @@ import axios from 'axios';
 
 
 function App() {
-  const [transaction,setTransaction] = useState( [
-    {id : 1, expense : "Rent", amount : 5000},
-    {id : 2, expense : "Salary", amount : 10000},
-    {id : 3, expense : "Food", amount : 2000},
-    {id : 4, expense : "Grocery", amount : 1000},
-] );
+  const [transaction,setTransaction] = useState( [] );
 
 useEffect(() => {
   axios

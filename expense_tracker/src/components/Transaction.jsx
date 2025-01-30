@@ -1,3 +1,6 @@
+
+import React from 'react';
+
 const Transaction = (props) =>{
     const { transaction, onDelete } = props;
        
